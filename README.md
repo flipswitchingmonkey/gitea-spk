@@ -18,17 +18,17 @@ Change into the newly created directory - the root directory:
 
 Download the Gitea binary matching your architecture from https://github.com/go-gitea/gitea/releases into the root directory. For example, a DiskStation with an ARMv6 (or ARMv7) CPU would require:
 
-`$ wget https://github.com/go-gitea/gitea/releases/download/v1.10.3/gitea-1.10.3-linux-arm-6`
+`$ wget https://github.com/go-gitea/gitea/releases/download/v1.11.4/gitea-1.11.4-linux-arm-6`
 
 Invoke the build script to have the package created:
 
 `$ ./create_spk.sh`
 
-The install package matching your binary (here `gitea-1.10.3-linux-arm-6.spk`) will be created in the root directory.
+The install package matching your binary (here `gitea-1.11.4-linux-arm-6.spk`) will be created in the root directory.
 
 If you have several binaries downloaded, you can specify the binary for which the package should be created:
 
-`$ ./create_spk.sh gitea-1.10.3-linux-arm-6`
+`$ ./create_spk.sh gitea-1.11.4-linux-arm-6`
 
 ### Installation
 
@@ -44,7 +44,7 @@ When installation has finished, the package center shows url and status of your 
 
 When accessed for the first time, Gitea will greet you with the installation settings. You should set your **Repository Root Path** to a shared folder. You can configure permissions for shared folders in the control panel via **Edit > Permissions > System internal user** to grant the Gitea user permission.
 
-Tested to work on DS215j with Gitea v1.10.3 (arm-6).
+Tested to work on DS215j with Gitea v1.11.4 (arm-6).
 
 ### Acknowledgements
 
