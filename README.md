@@ -6,9 +6,9 @@ Fork from [gogs-spk](https://github.com/alexandregz/gogs-spk) to create a SPK pa
 
 The Gitea package requires the **[Git Server](https://www.synology.com/en-global/dsm/packages/Git)** package.
 
-### Automatic cron job for Synology NAS - 2020 update
+### Automatic cron job for updating existing Gitea on Synology NAS - 2020 update
 
-To create automatic cron job, clone `cron_gitea_update.sh` file and set it inside Task Schedule to run and update Gitea automatically when new stable release comes up.
+To create automatic cron job for updating your Gitea, clone `cron_gitea_update.sh` file and set it inside Task Schedule to run and update Gitea automatically when new stable release comes up.
 
 You can also run this script manually from SSH console of your NAS, if you want to update it when you are ready, not when new release comes up.
 
