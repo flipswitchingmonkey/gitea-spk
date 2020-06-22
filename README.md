@@ -6,6 +6,24 @@ Fork from [gogs-spk](https://github.com/alexandregz/gogs-spk) to create a SPK pa
 
 The Gitea package requires the **[Git Server](https://www.synology.com/en-global/dsm/packages/Git)** package.
 
+### Automatic cron job for updating existing Gitea on Synology NAS - 2020 update
+
+To create automatic cron job for updating your Gitea, clone `cron_gitea_update.sh` file and set it inside Task Schedule to run and update Gitea automatically when new stable release comes up.
+
+You can also run this script manually from SSH console of your NAS, if you want to update it when you are ready, not when new release comes up.
+
+To setup this script, only required changes should be made at lines 24 and 34:
+
+`24: DOWNLOAD_URL=https://github.com/go-gitea/gitea/releases/download/v${GITEA_VERSION}/gitea-${GITEA_VERSION}-linux-XXX.xz`
+
+`34: sudo synopkg install /tmp/gitea/gitea-spk/gitea-${GITEA_VERSION}-linux-XXX.spk`
+
+where instead of `XXX` you should insert your NAS CPU architecture, for example `arm64` or `arm-6` as shown below.
+
+If Gitea package won't start automatically, you can just turn it on in Package Manager.
+
+This script is using gitea-spk packgage from flipswitchingmonkey and was tested with Gitea 1.11 and 1.12 on May and June 2020. Works OK. Huge thanks for [salesgroup](https://github.com/salesgroup) for sharing.
+
 ### Package creation
 
 To create the package, clone the repository:
